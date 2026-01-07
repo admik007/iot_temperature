@@ -10,8 +10,9 @@ import threading
 MQTT_BROKER = "localhost"
 MQTT_PORT = 1883
 MQTT_TOPIC = "temperature/#"   # listen to all devices
+ADDRESS = "temp.addr.es"
 
-HTTP_URL_TEMPLATE = "http://temp.ztk-comp.sk/?devicerpi={DEVICE_ID}&cputemp={CPUTEMP}&temp={TEMP}&hum={HUM}&press=0"
+HTTP_URL_TEMPLATE = "http://{ADDRESS}/?devicerpi={DEVICE_ID}&cputemp={CPUTEMP}&temp={TEMP}&hum={HUM}&press=0"
 
 UPDATE_INTERVAL = 60  # seconds between HTTP requests per device
 
